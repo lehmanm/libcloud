@@ -31,7 +31,8 @@ class CloudStackNode(Node):
         "Release a public IP that this node holds."
         return self.driver.ex_release_public_ip(self, address)
 
-    def ex_add_ip_forwarding_rule(self, address, protocol, start_port,
+    def ex_add_ip_
+    (self, address, protocol, start_port,
                                   end_port=None):
         "Add a NAT/firewall forwarding rule for a port or ports."
         return self.driver.ex_add_ip_forwarding_rule(self, address, protocol,
@@ -235,7 +236,7 @@ class CloudStackNodeDriver(CloudStackDriverMixIn, NodeDriver):
             extra={
                 'zoneid': location.id,
                 'ip_addresses': [],
-                'forwarding_rules': [],
+                'ip_forwarding_rules': [],
             }
         )
 
